@@ -1,0 +1,8 @@
+{
+    "name": "dlb-components-react",
+    "version": "0.0.11",
+    "main": "index.tsx",
+    "author": "David López",
+    "license": "MIT",
+    "description": "React Component Library Test"
+}
