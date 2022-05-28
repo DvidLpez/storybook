@@ -1,6 +1,6 @@
 {
     "name": "dlb-button",
-    "version": "0.0.9",
+    "version": "0.0.10",
     "main": "button.tsx",
     "author": "David López",
     "license": "MIT",
