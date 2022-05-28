@@ -1,9 +1,9 @@
 {
     "name": "button",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "main": "button.tsx",
     "author": "David López",
     "license": "MIT",
     "description": "Button component",
-    "gitHead": "4fc5464034ca9a06cb92cb2d56c0af15f2f7f0ad"
+    "gitHead": "64dfcbf35e80aa6d5803d99f176d0c76ed96e0a0"
 }
