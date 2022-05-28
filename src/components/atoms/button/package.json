@@ -1,9 +1,9 @@
 {
-    "name": "button",
-    "version": "0.0.8",
+    "name": "dlb-button",
+    "version": "0.0.9",
     "main": "button.tsx",
     "author": "David López",
     "license": "MIT",
     "description": "Button component",
-    "gitHead": "5eabef3d55be80b38959cb9ec1d2625c20e5cc90"
+    "gitHead": "1a6bf89eb56ab15a15492d1185d51d9a7411df41"
 }
