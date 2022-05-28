@@ -1,0 +1,8 @@
+{
+    "name": "button",
+    "version": "0.0.1",
+    "main": "button.tsx",
+    "author": "David López",
+    "license": "ISC",
+    "description": "Button component"
+  }
