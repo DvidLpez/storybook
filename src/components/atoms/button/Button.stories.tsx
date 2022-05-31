@@ -1,41 +1,96 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+// also exported from '@storybook/react' if you can deal with breaking changes in 6.1
+import { Story, Meta } from '@storybook/react';
 
-import { Button } from './Button';
+import Button, { ButtonProps } from '.';
+import styled from 'styled-components';
+import DownloadIcon from '../../../icons/Download';
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Example/Button',
+  title: 'Components/Atoms/Button',
   component: Button,
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
-} as ComponentMeta<typeof Button>;
+} as Meta;
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+const Template: Story<ButtonProps> = (args) => <Button {...args} />;
 
-export const Primary = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-Primary.args = {
-  primary: true,
-  label: 'Button',
+export const Default = Template.bind({});
+Default.args = {
+    children: 'Default Button'
+}
+
+export const DangerButton = Template.bind({});
+DangerButton.args = {
+  children: 'Danger Button',
+  type: 'danger',
+};
+
+export const Ghost = Template.bind({});
+Ghost.args = {
+  children: 'Ghost Button',
+  type: 'ghost',
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  label: 'Button',
+  children: 'Secondary Button',
+  type: 'secondary',
 };
 
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: 'Button',
+export const Disabled = Template.bind({});
+Disabled.args = {
+  children: 'Disabled Button',
+  disabled: true
 };
 
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
-  label: 'Button',
+export const Loading = Template.bind({});
+Loading.args = {
+  children: 'Button',
+  loading: true,
+};
+
+export const WithIcon = Template.bind({});
+WithIcon.args = {
+  icon: DownloadIcon,
+  children: 'Download',
+};
+
+const ButtonRow = styled.div`
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  & > * {
+    margin-right: 10px;
+  }
+`;
+
+export const Sizes = () => {
+  return (
+    <>
+      <ButtonRow>
+        <Button size='large'>Large</Button>
+        <Button size='default'>Default</Button>
+        <Button size='small'>Small</Button>
+      </ButtonRow>
+      <ButtonRow>
+        <Button type='danger' size='large'>Large</Button>
+        <Button type='danger' size='default'>Default</Button>
+        <Button type='danger' size='small'>Small</Button>
+      </ButtonRow>
+      <ButtonRow>
+        <Button type='ghost' size='large'>Large</Button>
+        <Button type='ghost' size='default'>Default</Button>
+        <Button type='ghost' size='small'>Small</Button>
+      </ButtonRow>
+      <ButtonRow>
+        <Button type='secondary' size='large'>Large</Button>
+        <Button type='secondary' size='default'>Default</Button>
+        <Button type='secondary' size='small'>Small</Button>
+      </ButtonRow>
+      <ButtonRow>
+        <Button loading disabled size='large'>Large</Button>
+        <Button loading disabled size='default'>Default</Button>
+        <Button loading disabled size='small'>Small</Button>
+      </ButtonRow>
+    </>
+  );
 };
