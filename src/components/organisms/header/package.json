@@ -1,8 +1,0 @@
-{
-    "name": "dlb-header",
-    "version": "0.0.10",
-    "main": "header.tsx",
-    "author": "David López",
-    "license": "MIT",
-    "description": "header component"
-}
