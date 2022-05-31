@@ -29,4 +29,8 @@ button + button {
   color: #333;
   font-size: 14px;
   margin-right: 10px;
+  margin-block: auto;
+}
+.box {
+  display: flex;
 }
